@@ -1,0 +1,14 @@
+{
+  "name": "plantain-flour-system-flowchart",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd workspace/dashboard && npm run dev",
+    "build": "cd workspace/dashboard && npm run build && cd ../.. && rm -rf build && cp -r workspace/dashboard/dist build",
+    "preview": "cd workspace/dashboard && npm run preview",
+    "install": "cd workspace/dashboard && npm install"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
