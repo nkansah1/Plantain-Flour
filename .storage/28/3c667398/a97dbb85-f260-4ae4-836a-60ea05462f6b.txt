@@ -1,0 +1,108 @@
+$ cd /workspace/dashboard && cat package.json
+{
+  "name": "react-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@10.10.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint ./src --quiet",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.0.2",
+    "@supabase/supabase-js": "^2.47.12",
+    "@types/prop-types": "^15.7.14",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.15.1",
+    "@metagptx/vite-plugin-source-locator": "latest"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.9.0",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "globals": "^15.9.0",
+    "postcss": "^8.4.45",
+    "tailwindcss": "^3.4.10",
+    "vite": "^5.4.1"
+  }
+}$ cd /workspace/dashboard && pnpm add lucide-react recharts
+
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 1, reused 1, downloaded 0, added 0
+Progress: resolved 59, reused 58, downloaded 0, added 0
+Progress: resolved 411, reused 409, downloaded 0, added 0
+Progress: resolved 494, reused 452, downloaded 0, added 0
+ WARN  1 deprecated subdependencies found: rollup-plugin-terser@7.0.2
+Packages: +1
++
+Progress: resolved 494, reused 452, downloaded 1, added 0
+Progress: resolved 494, reused 452, downloaded 1, added 1
+Progress: resolved 494, reused 452, downloaded 1, added 1, done
+ WARN  Issues with peer dependencies found
+.
+└─┬ @metagptx/vite-plugin-source-locator 0.0.6
+  └─┬ rollup-plugin-terser 7.0.2
+    └── ✕ unmet peer rollup@^2.0.0: found 4.47.1
+
+dependencies:
++ lucide-react 0.541.0
+
+╭ Warning ─────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│   Ignored build scripts: @metagptx/vite-plugin-source-locator, esbuild.      │
+│   Run "pnpm approve-builds" to pick which dependencies should be allowed     │
+│   to run scripts.                                                            │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+Done in 18.6s using pnpm v10.10.0
+$ cd /workspace/dashboard && pnpm run build
+
+
+> react-template@0.0.0 build /workspace/dashboard
+> vite build
+
+vite v5.4.19 building for production...
+transforming...
+✓ 2482 modules transformed.
+x Build failed in 4.62s
+error during build:
+src/components/MainDashboard.jsx (12:7): "default" is not exported by "src/components/modules/MarketAnalysis.jsx", imported by "src/components/MainDashboard.jsx".
+file: /workspace/dashboard/src/components/MainDashboard.jsx:12:7
+
+10: import RiskAssessment from './modules/RiskAssessment';
+11: import QualityControl from './modules/QualityControl';
+12: import MarketAnalysis from './modules/MarketAnalysis';
+           ^
+13: import DashboardOverview from './DashboardOverview';
+
+    at getRollupError (file:///workspace/dashboard/node_modules/.pnpm/rollup@4.47.1/node_modules/rollup/dist/es/shared/parseAst.js:401:41)
+    at error (file:///workspace/dashboard/node_modules/.pnpm/rollup@4.47.1/node_modules/rollup/dist/es/shared/parseAst.js:397:42)
+    at Module.error (file:///workspace/dashboard/node_modules/.pnpm/rollup@4.47.1/node_modules/rollup/dist/es/shared/node-entry.js:16877:16)
+    at Module.traceVariable (file:///workspace/dashboard/node_modules/.pnpm/rollup@4.47.1/node_modules/rollup/dist/es/shared/node-entry.js:17329:29)
+    at ModuleScope.findVariable (file:///workspace/dashboard/node_modules/.pnpm/rollup@4.47.1/node_modules/rollup/dist/es/shared/node-entry.js:14999:39)
+    at ReturnValueScope.findVariable (file:///workspace/dashboard/node_modules/.pnpm/rollup@4.47.1/node_modules/rollup/dist/es/shared/node-entry.js:5620:38)
+    at FunctionBodyScope.findVariable (file:///workspace/dashboard/node_modules/.pnpm/rollup@4.47.1/node_modules/rollup/dist/es/shared/node-entry.js:5620:38)
+    at ReturnValueScope.findVariable (file:///workspace/dashboard/node_modules/.pnpm/rollup@4.47.1/node_modules/rollup/dist/es/shared/node-entry.js:5620:38)
+    at FunctionBodyScope.findVariable (file:///workspace/dashboard/node_modules/.pnpm/rollup@4.47.1/node_modules/rollup/dist/es/shared/node-entry.js:5620:38)
+    at BlockScope.findVariable (file:///workspace/dashboard/node_modules/.pnpm/rollup@4.47.1/node_modules/rollup/dist/es/shared/node-entry.js:5620:38)
+ ELIFECYCLE  Command failed with exit code 1.
+$ cd /workspace/dashboard && pnpm run lint
+
+
+> react-template@0.0.0 lint /workspace/dashboard
+> eslint ./src --quiet
+
