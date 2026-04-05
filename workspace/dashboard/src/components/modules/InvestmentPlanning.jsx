@@ -35,7 +35,7 @@ const InvestmentPlanning = () => {
       utiliyInstallation: 8500000,
       officeAndQualityControlLaboratoryEquipment: 2500000,
       perOperativeExpenses: 2000000,
-      buildingConstruction: 13000000,
+      factoryConstruction: 12000000,
       landCost: landStatus === 'no' ? landSize * 5000000 : 0,
       workingCapital: 5000000,
       licensing: 500000
@@ -260,8 +260,8 @@ const InvestmentPlanning = () => {
                       <span>₦{results.equipmentCosts.perOperativeExpenses.toLocaleString()}</span>
                     </li>
                     <li className="flex justify-between">
-                      <span>Building Construction:</span>
-                      <span>₦{results.equipmentCosts.buildingConstruction.toLocaleString()}</span>
+                      <span>Factory Construction:</span>
+                      <span>₦{results.equipmentCosts.factoryConstruction.toLocaleString()}</span>
                     </li>
                     {formData.landStatus === 'no' && (
                       <li className="flex justify-between">
