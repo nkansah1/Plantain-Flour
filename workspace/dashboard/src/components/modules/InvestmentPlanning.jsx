@@ -248,8 +248,16 @@ const InvestmentPlanning = () => {
                       <span>₦{results.equipmentCosts.generator.toLocaleString()}</span>
                     </li>
                     <li className="flex justify-between">
-                      <span>Water System:</span>
-                      <span>₦{results.equipmentCosts.waterSystem.toLocaleString()}</span>
+                      <span>Utiliy Installation:</span>
+                      <span>₦{results.equipmentCosts.utiliyInstallation.toLocaleString()}</span>
+                    </li>
+                     <li className="flex justify-between">
+                      <span>Office And Quality Control Laboratory Equipment:</span>
+                      <span>₦{results.equipmentCosts.officeAndQualityControlLaboratoryEquipment.toLocaleString()}</span>
+                    </li>
+                     <li className="flex justify-between">
+                      <span>Per-OperativeExpenses:</span>
+                      <span>₦{results.equipmentCosts.perOperativeExpenses.toLocaleString()}</span>
                     </li>
                     <li className="flex justify-between">
                       <span>Building Construction:</span>
