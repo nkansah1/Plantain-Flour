@@ -32,8 +32,10 @@ const InvestmentPlanning = () => {
       grindingMill: 3500000,
       packagingMachine: 2200000,
       generator: 1500000,
-      waterSystem: 800000,
-      buildingConstruction: 15000000,
+      utiliyInstallation: 8500000,
+      officeAndQualityControlLaboratoryEquipment: 2500000,
+      perOperativeExpenses: 2000000,
+      buildingConstruction: 13000000,
       landCost: landStatus === 'no' ? landSize * 5000000 : 0,
       workingCapital: 5000000,
       licensing: 500000
